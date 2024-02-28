@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+}
+
+div {
+    outline: 1px solid;
+    background-color: lightgray;
+    margin: 0;
+    border: 0;
+    flex: 1 0 6.25%;
+    aspect-ratio: 1/1;
+}
