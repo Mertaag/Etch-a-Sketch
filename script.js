@@ -1,6 +1,7 @@
 const container = document.querySelector('#container');
 let div;
 let sideSize = 100 //101;
+let flexBasis = 100/sideSize;
 
 // while (sideSize>100 || sideSize == null || sideSize == ''){
 //     sideSize = prompt('Enter size size that is <=100');
@@ -11,7 +12,7 @@ let sideSize = 100 //101;
 for(i=0; i<=sideSize**2-1; i++){
     div = document.createElement('div');
     container.appendChild(div);
-    div.style.cssText = 'flex: 1 1 1%'; //how to calculate flex basis?
+    div.style.cssText = `flex: 1 1 ${flexBasis}%`;
 }
 
 //paint squares
