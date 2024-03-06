@@ -18,7 +18,16 @@ resetButton.addEventListener ('click', () => {
     }    
 })
 
+function randomColor() {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    return `rgb(${r},${g},${b})`
+}
+
+console.log(randomColor());
+
 container.addEventListener ('mouseover', (event) => {
     let target = event.target;
-    target.style.backgroundColor = 'black';
+    target.style.backgroundColor = randomColor();
 })
