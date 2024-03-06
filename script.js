@@ -3,19 +3,19 @@ let div;
 let sideSize;
 
 const resetButton = document.querySelector('#reset-button');
-resetButton.addEventListener ('click', () => {
+resetButton.addEventListener('click', () => {
     sideSize = 120;
     container.textContent = '';
-    
+
     do {
         sideSize = prompt('Enter side size that is <=100');
-    } while (sideSize>100 || sideSize == null || sideSize == '');
+    } while (sideSize > 100 || sideSize == null || sideSize == '');
 
-    for(i=0; i<=sideSize**2-1; i++){
+    for (i = 0; i <= sideSize ** 2 - 1; i++) {
         div = document.createElement('div');
         container.appendChild(div);
-        div.style.cssText = `flex: 1 1 ${100/sideSize}%`;
-    }    
+        div.style.cssText = `flex: 1 1 ${100 / sideSize}%`;
+    }
 })
 
 function randomColor() {
@@ -25,9 +25,12 @@ function randomColor() {
     return `rgb(${r},${g},${b})`
 }
 
-console.log(randomColor());
-
-container.addEventListener ('mouseover', (event) => {
+container.addEventListener('mouseover', (event) => {
     let target = event.target;
     target.style.backgroundColor = randomColor();
+
+    //turn on if you wan to change opacity of each square on each hover.
+    // let currentOpacity = parseFloat(target.style.opacity) || 0;
+    // target.style.opacity = Math.min(currentOpacity + 0.1, 1);
 })
+
