@@ -8,7 +8,7 @@ resetButton.addEventListener ('click', () => {
     container.textContent = '';
     
     do {
-        sideSize = prompt('Enter size size that is <=100');
+        sideSize = prompt('Enter side size that is <=100');
     } while (sideSize>100 || sideSize == null || sideSize == '');
 
     for(i=0; i<=sideSize**2-1; i++){
