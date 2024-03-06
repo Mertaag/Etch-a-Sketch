@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #reset-button-container {
     display: flex;
     align-items: center;
@@ -30,6 +37,5 @@
     background-color: lightgray;
     margin: 0;
     border: 0;
-     /* flex: 1 1 1%; have to remove once styled through JS */
     aspect-ratio: 1/1;
 }
